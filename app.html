@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YoutubeTV Party Share</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+          background: -webkit-linear-gradient(#000000,#000000,#00346c, #003366,#000000); 
+            -webkit-background-clip: text;
+            background-clip: text;
+          -webkit-text-fill-color: transparent;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            flex-grow: 1; /* Takes up the remaining space */
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #da0404;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #8b0000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .remove-button {
+            cursor: pointer;
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <div class="header form-group">
+    <img src="icon.png" alt="News Filter Icon" style="max-width: 91px;max-height: 58px;">
+    <h1 style="white-space: nowrap;">Host a YoutubeTV Party</h1>
+</div>
+    <div class="form-group">
+       <!-- Host a party -->
+        <button id="hostPartyButton">Host a YoutubeTV Party</button>
+        <!-- Join a party -->
+        <button id="joinPartyButton">Join a YoutubeTV Party</button>
+
+    </div>
+    <hr>
+    <div id="youtubeTVStatus">
+        Once you are connected to a party, the video will be synced with the host.
+    </div>
+
+    <script type="module" src="/popupSrc/app.js"></script>
+    <script type="module" src="/popupSrc/Status.js"></script>
+</body>
+</html>

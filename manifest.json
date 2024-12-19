@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YoutubeTV Party Share",
+  "version": "0.0.0.1",
+  "description": "A YoutubeTV Watch Party Chrome extension.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png",
+    "32": "icon.png",
+    "64": "icon.png",
+    "96": "icon.png"
+  },
+  "action": {
+    "default_popup": "app.html"
+  },
+  "permissions": ["activeTab","storage","scripting","offscreen"],
+  "host_permissions": ["https://tv.youtube.com/"],
+  "background": {
+    "service_worker": "/backgroundService/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://tv.youtube.com/*"],
+      "js": ["/contentService/playerControls.js"]
+    }
+  ]
+}
